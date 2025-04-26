@@ -111,13 +111,14 @@
 
 		fetch(scriptURL, {
 		method: 'POST',
+		mode: 'no-cors',
 		headers: { 'Content-Type': 'application/json' },
 		body: JSON.stringify(booking)
 	  })
       .then(res => res.json())
-      .then(data => {
-        alert('Booking confirmed and saved to Google Sheet!');
-      })
+.then(data => {
+  alert('Booking confirmed and saved to Google Sheet!');
+})
       .catch(err => {
         console.error('Error!', err.message);
         alert('There was an error booking your appointment.');
