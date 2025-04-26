@@ -109,11 +109,11 @@
       // YOUR GOOGLE SCRIPT URL BELOW 👇
       const scriptURL = 'https://script.google.com/macros/s/AKfycbyYj95HW35oIUDsnDzGtOi-h8hfsPBQ6Ds3kRiJShCqOeRNH4QgmurTAdHYJ6OGnFxNXQ/exec';
 
-      fetch(scriptURL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(booking)
-      })
+		fetch(scriptURL, {
+		method: 'POST',
+		headers: { 'Content-Type': 'application/json' },
+		body: JSON.stringify(booking)
+	  })
       .then(res => res.json())
       .then(data => {
         alert('Booking confirmed and saved to Google Sheet!');
